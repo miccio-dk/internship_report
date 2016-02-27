@@ -1,16 +1,17 @@
 % document infos
 \documentclass[12pt, a4paper, oneside, twocolumn, final]{article}
+
 \title{Internship at UAVComponents}
 \author{Riccardo Miccini  \\
 	Technical University of Denmark - DTU \\
 	}
 \date{\today}
 
+
 % here it starts!
 \begin{document}
 
 \maketitle
-
 
 \begin{abstract}
 abstract 
@@ -18,8 +19,23 @@ abstract
 
 \tableofcontents
 
-\section{Introduction}
-intro
+\section{Company description}
+\include{company.tex}
 
+\section{Position and duties}
+\include{job.tex}
+
+\section{Tools and knowledge used}
+\include{tools.tex}
+
+\section{Learning outcomes}
+\include{learn.tex}
+
+\section{Conclusions}
+\include{end.tex}
+
+\appendix
+\section{Time log: GIT commits}
+\include{commits.tex}
 
 \end{document}
