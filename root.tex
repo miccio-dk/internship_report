@@ -1,9 +1,10 @@
 % document infos
-\documentclass[12pt, a4paper, oneside, final]{article}
+\documentclass[12pt, a4paper, oneside, twocolumn, final]{article}
 
 \title{Internship at UAVComponents}
-\author{Riccardo Miccini}
-\publishers{Technical University of Denmark - DTU} 
+\author{Riccardo Miccini  \\
+	Technical University of Denmark - DTU \\
+	}
 \date{\today}
 
 
@@ -12,11 +13,14 @@
 
 \maketitle
 
-\include{abstract}
+\begin{abstract}
+\include{abstract.tex}
+\end{abstract}
 
 \tableofcontents
 
-\include{company}
+\section{Company description}
+\include{company.tex}
 
 \section{Position and duties}
 \include{job.tex}
