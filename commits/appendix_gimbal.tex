@@ -1,22 +1,7 @@
 \subsection{das-gimbal}
 
-\begin{tabular}{ l || p{12cm} }
+\begin{tabular}{ l || p{11cm} }
 	\hline			
-	Feb 21 2016 08:21	& shifting torwards new BLDC class APIs: no built-in pid, no pulse counting, current, fault, and reset handling. not compiling yetgit status	\\
-	Feb 19 2016 14:48	& radio integration 0.001: separated debug uart from debugging one, added radioclient obj, cleaned stuff	\\
-	Feb 19 2016 11:49	& Allan commited for riccardo	\\
-	Feb 17 2016 18:52	& commented out dev board uart pins	\\
-	Feb 17 2016 18:50	& fix uart bug: now it complains when uart_ptr is NULL	\\
-	Feb 17 2016 18:13	& updated combi firmware with latest fixes: utils libraries; init functions for components; merged board_settings_verify into a single, shared file; non-singleton-uart compatibility. Changed joystick APIs: setter/getters instead of second calibr function	\\
-	Feb 17 2016 15:25	& added uart(s) to globals, inizialization, processes, and CLI adapted to use new uart, removed motor pwm bias due to mechanical fix	\\
-	Feb 17 2016 14:24	& new non-singleton, ring-buffer-powered UART! sucks 10\% less than before	\\
-	Feb 12 2016 17:46	& switched to original arduino PID, fixed filename on header (ardulib), fixed Ka setter (ardulib2)	\\
-	Feb 12 2016 15:55	& changed enable/disable apis (in progress), further improvements on init printouts, filter NaN guards, switched to -O0 compilation, added cli shortcuts for switching from processing output to system info, added new, customizable filters to pid ardulib2, rough cleanup and fixes	\\
-	Feb 11 2016 15:39	& renamed pid libraries, added moving average filter class, created files for pid autotuner, idle process, added watchdog settings, expanded process APIs (in progress), improved init/boot debugging infos (in progress), added filter example, other fixes	\\
-	Feb 4 2016 19:07	& finished watchdog class, added wathdog testing (more needed), added 50\% pwm bias on the motor (also test)	\\
-	Feb 3 2016 12:40	& fixed imu internal filter (dlpf) modes; added dlpf to config and init; made generic PID wrapper (now it's easier to swap implementations); pid now uses real angles instead of raw steps; added new pid control algorithm with heuristic angle adjustment; new watchdog class (stub); updated main with latest working pid tunes; minor bugs fixes	\\
-	Feb 2 2016 12:13	& added DLPF profiles and setup, changed freq of processes, removed adaptive pid control, switched to arduino pid lib control	\\
-	Feb 1 2016 12:55	& rewritten motor calibr cli command, step response tests, new PID mode on data viewer, adaptive control tests, anti-windup on arm dsp pid, improved motor init	\\
 	Jan 29 2016 15:09	& improved and strimmed down uart apis	\\
 	Jan 29 2016 14:59	& added putn function to serialstream (send sequences of bytes of arbitrary len.)	\\
 	Jan 28 2016 18:26	& replaced pointers with references on function signatures, new pid cli command (unstable), new motor timer internal functions, added return values to init functions	\\
@@ -25,11 +10,11 @@
 	Jan 27 2016 14:27	& improved uart get string APIs, added setTXMode to serial streams, cli adjustments for new get string function	\\
 	Jan 26 2016 21:14	& fixed cfg strings, implemented ARM-DSP-based pid control, ported to single-imu usage, moved initialization stuff into separate functions, various fixes	\\
 	Jan 20 2016 19:47	& implemented PID separate class and interface, integrated it with motor class, and app code	\\
-	Jan 19 2016 11:03	& Merge branch 'master' of github.com:danishaviationsystems/das-gimbal	\\
+	Jan 19 2016 11:03	& Merge branch \'master\' of github.com:danishaviationsystems/das-gimbal	\\
 	Jan 19 2016 11:02	& renamed tracker firmware, switched to new structure (proc, obj, callbacks, cli), added imu, filters, joystick to traker, improved clamp alg., autotune draft (compiles but doesn't work), added more motor apis	\\
 	Jan 9 2016 19:01	& Update README.md	\\
 	Jan 6 2016 20:18	& removed (most) references to ext imu, improved pid tuning (not even there yet)	\\
-	Jan 6 2016 18:35	& fixes from 05/01/16, motor now runs (badly) on PID, removed/moved references to arm_dsp_lib, improved process management adn debugging proc., fixed warnings on madgwick IMU filter, removed useless includes on imu class, moved proc. init	\\
+	Jan 6 2016 18:35	& fixes from 05/01/16, motor now runs (badly) on PID, removed/moved references to arm{\_}dsp{\_}lib, improved process management adn debugging proc., fixed warnings on madgwick IMU filter, removed useless includes on imu class, moved proc. init	\\
 	Jan 5 2016 19:23	& Update bldc.cpp	\\
 	Jan 5 2016 19:21	& Update bldc.hpp	\\
 	Jan 5 2016 15:13	& Update common.hpp	\\
@@ -40,15 +25,15 @@
 	Dec 21 2015 13:21	& implemented debug levels (partly), improved madgwick filter speed, switched to fast variable types for loops (in progress)	\\
 	Dec 17 2015 19:07	& changed IMUState into template, new process class (and main file ported to use it), changed main loop config, ported some loop counters to fast type (in progress)	\\
 	Dec 16 2015 11:41	& improved/fixed madgwick filter for MARG, sensor reading, and main loop	\\
-	Dec 11 2015 16:56	& Merge branch 'master' of github.com:danishaviationsystems/das-gimbal	\\
+	Dec 11 2015 16:56	& Merge branch \'master\' of github.com:danishaviationsystems/das-gimbal	\\
 	Dec 11 2015 16:48	& madgwick filter roughly working, fixed i2c readBit (desired bit is now the 0th), switched IMU APIs to float, new float display system for dbg, new eeprom config system checksum for updates, fixed rgbled class to support individual leds	\\
 	Dec 7 2015 12:47	& added joystic UC example, improved position control, changed settings and cfg	\\
 	Dec 3 2015 20:33	& fixed compile errors from tmp push, new joystick calibr function, safer imu init, improved configuration, setup draft of main apps	\\
-	Dec 3 2015 11:58	& Merge branch 'master' of github.com:danishaviationsystems/das-gimbal	\\
+	Dec 3 2015 11:58	& Merge branch \'master\' of github.com:danishaviationsystems/das-gimbal	\\
 	Dec 3 2015 11:58	& tmp commit part 2	\\
 	Dec 2 2015 15:00	& Update main.cpp	\\
 	Dec 2 2015 14:59	& Update main.cpp	\\
-	Dec 2 2015 14:15	& Update init_config.cpp	\\
+	Dec 2 2015 14:15	& Update init{\_}config.cpp	\\
 	Dec 2 2015 14:08	& Update mpu9250.hpp	\\
 	Dec 2 2015 14:07	& Update imu.hpp	\\
 	Dec 2 2015 14:04	& Update mpu9250.cpp	\\
@@ -57,14 +42,14 @@
 	Dec 1 2015 16:26	& Update bldc.hpp	\\
 	Dec 1 2015 16:26	& Update bldc.hpp	\\
 	Dec 1 2015 16:20	& Update main.cpp	\\
-	Dec 1 2015 16:08	& Update init_config.cpp	\\
-	Dec 1 2015 15:45	& Update init_config.cpp	\\
+	Dec 1 2015 16:08	& Update init{\_}config.cpp	\\
+	Dec 1 2015 15:45	& Update init{\_}config.cpp	\\
 	Dec 1 2015 15:21	& Create tests.cpp.bak	\\
-	Dec 1 2015 15:10	& Update init_config.cpp	\\
+	Dec 1 2015 15:10	& Update init{\_}config.cpp	\\
 	Dec 1 2015 15:10	& Update main.cpp	\\
 	Dec 1 2015 14:57	& Update joystick.hpp	\\
 	Dec 1 2015 14:00	& Create tests.cpp.bak	\\
-	Dec 1 2015 13:55	& Update init_config.cpp	\\
+	Dec 1 2015 13:55	& Update init{\_}config.cpp	\\
 	Dec 1 2015 12:56	& Tmp push by allan	\\
 	Nov 26 2015 20:24	& improved calibration test/compatibility, cleaned up main and bldc class	\\
 	Nov 26 2015 18:44	& improved motor apis, inplemented most bldc functions, various fixes	\\
