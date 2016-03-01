@@ -19,7 +19,10 @@ This was accomplished with a series of programming tasks, such as interfacing th
 After having acquired the necessary understanding of the development environment, the focus shifted into experimenting with the UAVCAN library in order to evaluate its capabilities and pitfalls, before integrating it into the existing codebase.
 UAVCAN is an open-source project based on CANbus aimed at simplifying communication within a drone periferals.
 Once assessed and verified its functionalities, it has been chosen to start working on a line of compliant products.
-The first item was the \emph{UAVCAN UAX board}, a device that could be used to control digital servos and other actuators by means of PWM signals.
+The first items were the \emph{UAVCAN UAX board}, a device that can control digital servos and other actuators by means of PWM signals, and the \emph{UAVCAN MPU Guard}, which automatically chooses the most efficient power source from those connected to its inputs.
+
+Programming these functionalities implied developing an Hardware Abstraction Layer (HAL) around microcontroller peripherals like ADC, DAC, timers, watchdog, and so forth.
+This, in turn, required a fairly solid knowledge of the data sheet and user manual of the MCU.
 
 
 \subsection{Internal autopilot}
