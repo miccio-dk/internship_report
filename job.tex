@@ -32,7 +32,19 @@ Despite having gotten very close to completion on the \emph{UAVCAN UAX board}, t
 At a later point, it has been agreed to develop an autopilot from stratch, in order to gain an insightful view of how estimation algorithms and navigation systems work.
 
 My involvment in this project consisted in assisting the design of both software and hardware.
-Firstly, 
+After having compiled a list of requirements and specifications, a brief research has been conducted in order to choose the relevant hardware components, such as the internal sensors, communication ports, and microcontroller.
+Since the latter was required to have much more computational power than those previously mentioned MCU, an extensive research has been engaged.
+A choice was made after evaluating several develompment platforms and toolchains.
+
+The software develpment aspects of the autopilot in which I was involved mainly consisted in drawing several diagrams such as Structure diagram, Interaction diagram, and Sequence diagrams, which helped assessing the main tasks and split the workload accordingly.
+Due to the increased complexity of the project, a \emph{Real-time Operating System} was necessary to control all the different processes within the autopilot. 
+After testing several solutions (FreeRTOS, NuttX, eCos\dots) the choice fell on ChibiOS, an open-source RTOS which natively supports the chosen MCU.
+Along with setting the structure of the software, I was responsible of integrating the UAVCAN protocol into the RTOS.
+
+After becoming positively impressed with the capabilities of ChibiOS, it seemed relevant to employ it in all future software releases and projects. 
+However, this required porting the peripheral drivers code to the NXP microcontroller series.
+The company allocated one week of development for this task, after which the most basic functionalities were fulfilled (PWM, ADC, GPIOs).
+Subsequently, the priority of the other software developers went back into the autopilot, and I was assigned to the last project.
 
 
 \subsection{Light gimbal}
@@ -40,5 +52,4 @@ Firstly,
 
 
 
-- autopilot, chibios port
 - wiseled
