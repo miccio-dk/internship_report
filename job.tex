@@ -23,7 +23,7 @@ The first items were the \emph{UAVCAN UAX board}, a device that can control digi
 
 Programming these functionalities implied developing an Hardware Abstraction Layer (HAL) around microcontroller peripherals like ADC, DAC, timers, watchdog, and so forth.
 This, in turn, required a fairly solid knowledge of the information in the data sheet and user manual of the MCU.
-Another important aspect was the integration of the UAVCAN software library, which proved to be a challenging task due to the scarcity of memory resources - both storage and SRAM - in some of the devices.
+Another important aspect was the integration of the UAVCAN software library, which proved to be a challenging task due to the scarcity of memory resources --- both storage and SRAM --- in some of the devices.
 
 Despite having gotten very close to completion on the \emph{UAVCAN UAX board}, the project has been put on hold due to major hardware design changes which made the firmware incompatible with the newer iteration.
 
@@ -48,8 +48,20 @@ Subsequently, the priority of the other software developers went back into the a
 
 
 \subsection{Light gimbal}
+This project, commissioned by an external client, consisted in developing an electronic controller for a self-stabilizing lamp with remote control and traking capabilities.
 
+The product --- intended for military usage --- consisted in a 7-LED torch mounted on a 2-axis gimbal powered by sensored BLDC motors, and a portable tracker device with a built-in joystick. 
+The gimbal can be mounted on vehicles, and would keep the light beam steady at a desired position regardless of road bumps and other sources of disturbance.
+It can also be paired with a tracker --- adequately attached to a helmet or gun turret --- in order to mimic its heading.
 
+The main tasks for this this project in which i was involved were:
+\begin{itemize}  
+\item Selection of required sensors and MCU, with choice fallen for an emph{inertial measurement unit}, used to track heading, and the LPC1549 microcontroller, due to its peripheral capabilities. These devices have been employed on both the gimbal and the tracker.
+\item Implementation of a hardware abstraction layers and APIs for the main building blocks of both gimbal and tracker. Such components where: communication protocols, sensors, motors, buttons, LEDs, settings manager, command line interface, PID controller, data filtering and fusion, process managements and debugging interface.
+\item Integration of aforementioned software components in order to fulfill customer use cases.
+\end{itemize}
 
-
-- wiseled
+The project revealed to be much more challengind than expected due to mechanical issues and changes in requirements. 
+Major difficulties have been experienced in regards of achieving a proper sensor placement; slight variations in the commutation sequence for the brushless motors would in fact degrade their torque performances.
+As a result, the project is still in development, although having reached its final stage.
+So far it takes up about 30 thousands lines of code, including contribution from other developers (mainly involved in the radio communcation and pairing mechanism).
