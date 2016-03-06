@@ -8,7 +8,16 @@ Due to the nature of the job, all of the tools presented here are software-based
 LPCXpresso is NXP's own development environment.
 Under that name, they market their series of evaluation boards and IDE, which is based on the popular \emph{Eclipse}. 
 It features a text editor/project manager, an C/C++ compiler for the ARM architecture (based on the open-source \emph{GCC}), and several debugging tools like memory browser, peripherals and registers viewer, and firmware flasher.
+
 The evaluation boards are build around the LPC family of 32-bit microcontrollers, and come in countless varieties (normally one or more for each MCU line).
+Depending on the version, they have \emph{mbed} and/or \emph{Arduino} pin headers, and a built-in debugger capable of probing external targets too.
+This revealed particularly useful when debugging custom boards or different microcontrollers.
+
+LPCOpen is a set of C libraries intended for interfacing with MCU peripherals, \emph{IAP} (in-application programming), and ROM APIs.
+They share similar naming conventions and APIs, allowing for easy porting of LPCOpen-based projects.
+Several development envirnments are supported, including \emph{LPCXpresso}, \emph{ARM Keil}, and \emph{IAR}.
+Despite simplifying the interaction with hardware components, LPCOpen provides mostly low-lever functionalities, so they have been used as the basis for the Hardware Abstraction Layer mentioned in the previous sections.
+These libraries are also compatible with \emph{freeRTOS}, although the extent of the integration varies widely across the MCU range.
 
 
 \subsubsection{GitHub/git}
@@ -17,13 +26,19 @@ Managing large projects with several team members can easely become a tedious an
 In order to overcome this difficulty, \emph{git} has been chosen due to its performances, ease of use, well-maintained documentation, and the existence of online platforms like \emph{GitHub}, which allows repositories to be hosted online, shared, and managed from the website interface.
 
 With this tool, it was possible to keep track of the different code releases, split development by means of branching a repository, and collect useful statistics to asses the state of a project.
+Learning to use \emph{git} is an ongoing process, which also involves finding the right software for managing the repository.
 
-Learning to use \emph{git} is an ongoing process, which also involves using several graphical tools.
-Amongst t
 
 
 \subsubsection{Prototyping platforms}
-mbed/Arduino/Processing
+Throughout the internship, it has often been necessary to develop quick prototypes for evaluating external components or simulating specific behaviours.
+Besides the ubiquitous Arduino platform, \emph{mbed} and \emph{Processing} have also been employed.
+
+The former is based on similar grounds as Arduino's, offering an open-source development environment, reference schematics and designs for compatible products, and simplified software APIs
+Since it is meant for 32-bit Cortex-M microcontrollers, it offers lots of advanced functionalities such as virtual timers and interrupts, DAC output, built-in USB and Ethernet, and so forth.
+Unlike Arduino, \emph{mbed} supports hardware from a vast selection of silicon manufacturers, and the IDE is browser-based. 
+Projects can however be exported for offline usage in several toolchains.
+
 
 
 \subsubsection{Linux}
@@ -31,8 +46,9 @@ Linux is an open-source, community-driven operating system.
 Although having had previous experience with it, using it on a daily basis allowed me to become proficient with a wide range of terminal commands, like the aforementioned \emph{git}, but also \emph{grep} for searching file contents, \emph{bash} and \emph{awk} scripting, and the \emph{apt-get} software package manager.
 
 The Linux distribution of preference was \emph{Linux Mint 17.2}, which is based on the more popular \emph{Ubuntu Linux 14.}.
-It has been choses for its lightweight and features-rich desktop manager, which allowed unprecedented stability: the workstation required a single reboot throughout
+It has been chosen for its lightweight and features-rich desktop manager, which allowed unprecedented stability: the workstation required a single reboot throughout the course of the entire internship.
 
+Several other Linux distributions have been used, including on embedded systems and platforms.
 
 
 \subsection{Relevant knowledge}
