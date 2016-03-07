@@ -33,10 +33,14 @@ Learning to use \emph{git} is an ongoing process, which also involves finding th
 Throughout the internship, it has often been necessary to develop quick prototypes for evaluating external components or simulating specific behaviours.
 Besides the ubiquitous Arduino platform, \emph{mbed} and \emph{Processing} have also been employed.
 
-The former is based on similar grounds as Arduino's, offering an open-source development environment, reference schematics and designs for compatible products, and simplified software APIs
+The former is based on similar grounds as Arduino's, offering an open-source development environment, reference schematics and designs for compatible products, and simplified software APIs.
 Since it is meant for 32-bit Cortex-M microcontrollers, it offers lots of advanced functionalities such as virtual timers and interrupts, DAC output, built-in USB and Ethernet, and so forth.
 Unlike Arduino, \emph{mbed} supports hardware from a vast selection of silicon manufacturers, and the IDE is browser-based. 
 Projects can however be exported for offline usage in several toolchains.
+
+\emph{Processing} is a software platform for creating interactive animations and visual graphics.
+It runs on computers through a Java virtual machine and bears many similarities with Arduiono, including sintax and IDE.
+This tool has also been extensively used for visualizing data streams and creating interactive plots.
 
 
 \subsubsection{Linux}
@@ -50,7 +54,8 @@ Several other Linux distributions have been used, including on embedded systems 
 
 
 \subsection{Relevant knowledge}
+The theoretical aspects upon which some of the projects would rely are mainly related to control theory, in particular PID controls.
+These have been employed in the light gimbal in order to position the moving head at the desired position (which corresponds to the setpoint of the control loop).
+Knowing how to tune the parameters of a PID controller has also revealed particularly useful, and a software implementation of the popular \emph{Ziegler–Nichols} method has been created too.
 
-- control theory
-- machine architecture
-- basic analog
+Basic analog and digital electronics design skills were also necessary when inspecting schematics and troubleshoting hardware, as well as notions of MCU architecture and basic Assembly were useful for debugging software-related faults. 
