@@ -1,31 +1,31 @@
 \section{Tools and knowledge used}
-This section will cover various tool that have been employed during the course of the internship.
+This section will cover various tools that have been employed during the course of the internship.
 Due to the nature of the job, all of the tools presented here are software-based, although conventional Electronic Engineering tools such as power supplies and oscilloscopes have been used.
 
 \subsection{Software and tools}
 
 \subsubsection{LPCXpresso - LPCOpen}
 LPCXpresso is NXP's own development environment.
-Under that name, they market their series of evaluation boards and IDE, which is based on the popular \emph{Eclipse}. 
-It features a text editor/project manager, an C/C++ compiler for the ARM architecture (based on the open-source \emph{GCC}), and several debugging tools like memory browser, peripherals and registers viewer, and firmware flasher.
+Under that name, they market their series of evaluation boards and IDE, which is based on the popular \emph{Eclipse}.
+It features a text editor/project manager, a C/C++ compiler for the ARM architecture (based on the open-source \emph{GCC}), and several debugging tools like memory browser, peripherals and registers viewer, and firmware flasher.
 
-The evaluation boards are build around the LPC family of 32-bit microcontrollers, and come in countless varieties (normally one or more for each MCU line).
+The evaluation boards are built around the LPC family of 32-bit microcontrollers, and come in countless varieties (normally one or more for each MCU line).
 Depending on the version, they have \emph{mbed} and/or \emph{Arduino} pin headers, and a built-in debugger capable of probing external targets too.
 This revealed particularly useful when debugging custom boards or different microcontrollers.
 
 LPCOpen is a set of C libraries intended for interfacing with MCU peripherals, \emph{IAP} (in-application programming), and ROM APIs.
 They share similar naming conventions and APIs, allowing for easy porting of LPCOpen-based projects.
-Several development envirnments are supported, including \emph{LPCXpresso}, \emph{ARM Keil}, and \emph{IAR}.
-Despite simplifying the interaction with hardware components, LPCOpen provides mostly low-lever functionalities, so they have been used as the basis for the Hardware Abstraction Layer mentioned in the previous sections.
+Several development environments are supported, including \emph{LPCXpresso}, \emph{ARM Keil}, and \emph{IAR}.
+Despite simplifying the interaction with hardware components, LPCOpen provides mostly low-level functionalities, so they have been used as the basis for the Hardware Abstraction Layer mentioned in the previous sections.
 These libraries are also compatible with \emph{freeRTOS}, although the extent of the integration varies widely across the MCU range.
 
 
 \subsubsection{GitHub/git}
-Managing large projects with several team members can easely become a tedious and time-consuming task if no version control system is used. 
+Managing large projects with several team members can easily become a tedious and time-consuming task if no version control system is used.
 
 In order to overcome this difficulty, \emph{git} has been chosen due to its performances, ease of use, well-maintained documentation, and the existence of online platforms like \emph{GitHub}, which allows repositories to be hosted online, shared, and managed from the website interface.
 
-With this tool, it was possible to keep track of the different code releases, split development by means of branching a repository, and collect useful statistics to asses the state of a project.
+With this tool, it was possible to keep track of the different code releases, split development by means of branching a repository, and collect useful statistics to assess the state of a project.
 Learning to use \emph{git} is an ongoing process, which also involves finding the right software for managing the repository.
 
 
@@ -35,12 +35,12 @@ Besides the ubiquitous Arduino platform, \emph{mbed} and \emph{Processing} have 
 
 The former is based on similar grounds as Arduino's, offering an open-source development environment, reference schematics and designs for compatible products, and simplified software APIs.
 Since it is meant for 32-bit Cortex-M microcontrollers, it offers lots of advanced functionalities such as virtual timers and interrupts, DAC output, built-in USB and Ethernet, and so forth.
-Unlike Arduino, \emph{mbed} supports hardware from a vast selection of silicon manufacturers, and the IDE is browser-based. 
+Unlike Arduino, \emph{mbed} supports hardware from a vast selection of silicon manufacturers, and the IDE is browser-based.
 Projects can however be exported for offline usage in several toolchains.
 
 \emph{Processing} is a software platform for creating interactive animations and visual graphics.
-It runs on computers through a Java virtual machine and bears many similarities with Arduiono, including sintax and IDE.
-This tool has also been extensively used for visualizing data streams and creating interactive plots.
+It runs on computers through a Java virtual machine and bears many similarities with Arduino, including syntax and IDE.
+This tool has also been extensively used for visualising data streams and creating interactive plots.
 
 
 \subsubsection{Linux}
@@ -58,4 +58,4 @@ The theoretical aspects upon which some of the projects would rely are mainly re
 These have been employed in the light gimbal in order to position the moving head at the desired position (which corresponds to the setpoint of the control loop).
 Knowing how to tune the parameters of a PID controller has also revealed particularly useful, and a software implementation of the popular \emph{Ziegler–Nichols} method has been created too.
 
-Basic analog and digital electronics design skills were also necessary when inspecting schematics and troubleshoting hardware, as well as notions of MCU architecture and basic Assembly were useful for debugging software-related faults. 
+Basic analog and digital electronics design skills were also necessary when inspecting schematics and troubleshooting hardware, as well as notions of MCU architecture and basic Assembly were useful for debugging software-related faults.
